@@ -55,3 +55,16 @@ SHOW COLUMNS IN RECEPCION;
 
 /* Listar tablas existentes en la base de datos en uso */
 SHOW TABLES;
+SET SQL_SAFE_UPDATES = 0;
+INSERT INTO REGISTRO 
+	( nombres, apellidos, dni, telefono, email, mensaje)
+VALUES
+    ("Alberto", "Solano Pariona", "77889955", "998456323", "alberto.pariona@gmail.com","QUIERO INFORMACION"),
+    ( "Juana", "Avila Chumpitaz","315487922", "923568741 ", "juana.avila@gmail.com","QUIERO SABER MAS INFORMACION");
+SELECT * FROM REGISTRO;
+INSERT INTO RECEPCION
+	(REGISTRO_id)
+VALUES
+	(2),
+	(1);
+SELECT * FROM RECEPCION;
